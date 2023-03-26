@@ -1,0 +1,9 @@
+h1,
+    div {
+        background-color: blue;
+    }
+
+    span,
+    a {
+        background-color: greenyellow;
+    }

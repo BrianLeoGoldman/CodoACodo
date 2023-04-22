@@ -1,9 +1,70 @@
-h1,
-    div {
-        background-color: blue;
-    }
-
-    span,
-    a {
-        background-color: greenyellow;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.header {
+    background-color: white;
+    box-shadow: 0 0 10px rgb(212, 24, 190);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.header .header__container {
+    max-width: 1100px;
+    max-height: 100px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .header__container .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.header .header__container .navbar .navbar__link {
+    font-family: 'Indie Flower', cursive;
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Sedgwick Ave Display', cursive; */
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(212, 24, 190);
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 10px;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+.header .cart-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(234, 128, 202, 0.496);
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.header .cart-widget .cart-logo {
+    height:2.5em;
+}
+.header .cart-widget .cart-counter {
+    height: 1.5em;
+    font-size: larger;
+    font-weight: 700;
+    color: black;
+}

@@ -68,3 +68,44 @@
     font-weight: 700;
     color: black;
 }
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(162, 37, 133);
+    box-shadow: 0 0 5px #1854af;
+    text-align: center;
+    width: 100%;     
+    padding-bottom: 2px;
+}
+.footer .text {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .text .footer-text {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+    padding-top: 5px; 
+}
+.footer .logos {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer .logos img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+

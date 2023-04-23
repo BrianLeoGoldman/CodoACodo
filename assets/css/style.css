@@ -1,3 +1,31 @@
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(-360deg)
+    }
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(1.25, 1.25);
+    }
+    50% {
+        transform: scale(1, 1);
+    }
+    75% {
+        transform: scale(1.25, 1.25);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +47,10 @@
     transition: filter 300ms;
     border-radius: 10px;
     margin-left: 20px;
+}
+.header .logo:hover {
+    animation: rotate 1s ease infinite;
+    filter: drop-shadow(0 0 0.5em #f403d0);
 }
 .header .header__container {
     max-width: 1100px;

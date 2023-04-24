@@ -31,6 +31,9 @@
     padding: 0;
     box-sizing: border-box; 
 }
+
+/* HEADER */
+
 .header {
     background-color: white;
     box-shadow: 0 0 10px rgb(212, 24, 190);
@@ -99,6 +102,17 @@
     font-size: larger;
     font-weight: 700;
     color: black;
+}
+
+/* MAIN */
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
 }
 
 /* FOOTER */

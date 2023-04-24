@@ -42,11 +42,11 @@
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    height: 1.5em;
+    height: 1.7em;
     will-change: filter;
     transition: filter 300ms;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 .header .logo:hover {
     animation: rotate 1s ease infinite;
@@ -69,6 +69,9 @@
 }
 .header .header__container .navbar .navbar__link {
     font-family: 'Indie Flower', cursive;
+    /* font-family: 'Permanent Marker', cursive; */
+    /* font-family: 'Pattaya', sans-serif; */
+    /* font-family: 'Marck Script', cursive; */
     /* font-family: 'Pacifico', cursive; */
     /* font-family: 'Sedgwick Ave Display', cursive; */
     font-weight: 700;
@@ -89,7 +92,7 @@
     padding: 5px;
     padding-right: 10px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 .header .cart-widget .cart-logo {
     height:2.5em;

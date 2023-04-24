@@ -36,7 +36,7 @@
 
 .header {
     background-color: white;
-    box-shadow: 0 0 10px rgb(212, 24, 190);
+    box-shadow: 0 0 10px rgba(212, 24, 190);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,10 +113,35 @@
     font-family: 'Indie Flower', cursive;
 }
 
+.main__container {
+    width: auto;
+    display: flex;
+    max-width: auto;
+}
+
 .main__container__img {
     margin-top: 15px;
     margin-left: 130px;
     width: 80%;
+}
+
+.card {
+    margin: 20px;
+    background: rgba(234, 128, 202, 0.496);
+    box-shadow: 0px 1px 10px rgba(234, 128, 202, 0.496);
+    cursor: default;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
+    transition: all .3s;
+    transform: translateY(-3%);
+}
+
+.card__img {
+    width: 391x;
+    height: 260px;
 }
 
 /* FOOTER */

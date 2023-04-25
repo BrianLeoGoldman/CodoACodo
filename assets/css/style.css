@@ -107,10 +107,7 @@
 /* MAIN */
 
 .main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Indie Flower', cursive;
+
 }
 
 .main__container {
@@ -142,6 +139,20 @@
 .card__img {
     width: 391x;
     height: 260px;
+}
+
+.card__conteiner {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+.card__conteiner h3 {
+    color: rgb(212, 24, 190);
+}
+
+.button__img {
+    width: 25px;
 }
 
 /* FOOTER */

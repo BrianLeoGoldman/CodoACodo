@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 @keyframes rotate {
     from {
         transform: rotate(0deg)
@@ -81,7 +83,8 @@
 }
 
 .header .header__container .navbar .navbar__link {
-    font-family: 'Indie Flower', cursive;
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Architects Daughter', cursive;
     /* font-family: 'Pacifico', cursive; */
     /* font-family: 'Sedgwick Ave Display', cursive; */
     font-weight: 700;
@@ -155,7 +158,7 @@
 .card__conteiner {
     padding: 15px;
     text-align: center;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Architects Daughter', cursive;
 }
 
 .card__conteiner h3 {
@@ -165,6 +168,78 @@
 .a__img {
     width: 25px;
     background-color: transparent;
+}
+
+/* CONTACT */
+
+.main__form {
+    width: 1000px;
+    background: rgba(234, 128, 202, 0.496);
+    padding: 30px;
+    margin: 60px 100px 60px 200px;
+    border-radius: 8px;
+    font-family: 'Architects Daughter', cursive;
+    color: black;  
+    box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
+}
+
+.main__form h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(162, 37, 133);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.main__section {
+    display: flex;
+    font-size: 25px;
+}
+
+.section__form{
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 10px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+form ::placeholder {
+    color: rgb(162, 37, 133);
+    font-family: 'Architects Daughter', cursive;
+}
+
+.form--lastname {
+    margin: 5px 0px 5px 0px;
+}
+
+.form--coment {
+    margin-top: 5px;
+}
+
+.main__section img {
+    width: 500px;
+    height: 100%;
+    border-radius: 8px;
+    margin-left: 30px;
+}
+
+.section__bottom {
+    display: flex;
+    justify-content:flex-end;
+}
+
+.section--input {
+    background-color: rgb(162, 37, 133);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 2px;
+    margin: 2px;
 }
 
 /* FOOTER */
@@ -191,7 +266,8 @@
 
 .footer .text .footer-text {
     color: white;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Architects Daughter', cursive;
+    /* font-family: 'Indie Flower', cursive; */
     font-size: 1.5rem;
     padding-top: 5px;
 }

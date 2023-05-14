@@ -11,9 +11,9 @@ class StorageManager {
     }
 
     save(key, dataToSave) {
-        let toStorage = this.load(key);
-        toStorage.push(dataToSave);
-        localStorage.setItem(key, JSON.stringify(toStorage));
+        /* let toStorage = this.load(key);
+        toStorage.push(dataToSave); */
+        localStorage.setItem(key, JSON.stringify(dataToSave));
     }
 }
 

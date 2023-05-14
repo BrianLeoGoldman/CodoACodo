@@ -122,16 +122,16 @@
 
 /* MAIN */
 
-.main__container {
-    width: 100%;
-    display: flex;
-}
-
 .main__img {
     margin-top: 20px;
     margin-left: 120px;
     width: 1200px;
     border-radius: 8px;
+}
+
+.main__container {
+    width: 100%;
+    display: flex;
 }
 
 .card {
@@ -179,7 +179,7 @@
     margin: 60px 100px 60px 200px;
     border-radius: 8px;
     font-family: 'Architects Daughter', cursive;
-    color: black;  
+    color: black;
     box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
 }
 
@@ -197,7 +197,7 @@
     font-size: 25px;
 }
 
-.section__form{
+.section__form {
     margin-top: 15px;
     margin-left: 30px;
     padding: 10px;
@@ -226,7 +226,7 @@ form ::placeholder {
 
 .section__bottom {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
 }
 
 .section--input {
@@ -284,4 +284,175 @@ form ::placeholder {
     width: 50px;
     height: 50px;
     margin: 5px;
+}
+
+/*-------------------------------MEDIA QUERY-----------------------------*/
+@media screen and (max-width: 1400px) {
+    .main__img {
+        margin-left: 115px;
+        width: 1100px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .main__img {
+        margin-left: 110px;
+        width: 1050px;
+        margin-top: 25px;
+    }
+    .main {
+        height: 800px;
+    }
+    .card {
+        margin: 25px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main__img {
+        margin-left: 105px;
+        width: 1000px;
+    }
+    .main__container {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main__img {
+        margin-left: 100px;
+        width: 950px;
+    }
+    .main__container {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main__img {
+        margin-left: 60px;
+        width: 900px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main__img {
+        margin-left: 30px;
+        width: 850px;
+    }
+    .main__container {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main__img {
+        margin-left: 85px;
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        height: 1200px;
+    }
+    .header .logo {
+        height: 1.2em;
+    }
+    .header .header__container .navbar .navbar__link {
+        font-size: 20px;
+    }
+    .header .cart-widget .cart-logo {
+        height: 2em;
+    }
+    .header .cart-widget .cart-counter {
+        height: 1em;
+    }
+    .main__container {
+        display:inline;
+    }
+    .main__img {
+        margin-left: 80px;
+        width: 550px;
+    }
+    .card {
+        width: 250px;
+        margin-left: 220px;
+    }
+    .card__img {
+        width: 250px;
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .header .header__container .navbar .navbar__link {
+        font-size: 15px;
+    }
+    .header .cart-widget .cart-logo {
+        height: 1.6em;
+    }
+    .main__img {
+        margin-left: 60px;
+        width: 500px;
+    }
+    .card {
+        margin-left: 180px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main__img {
+        margin-left: 60px;
+        width: 400px;
+    }
+    .card {
+        width: 250px;
+        margin-left: 160px;
+    }
+    .card {
+        width: 200px;
+    }
+    .card__img {
+        width: 200px;
+        height: 100%;
+    }
+    .header .header__container .navbar {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header .header__container .navbar {
+        gap: 1px;
+    }
+    .header .cart-widget .cart-counter {
+        height: 0.8em;
+        font-size: small;
+    }
+    .header .cart-widget .cart-logo {
+        height: 1em;
+    }
+    .main__img {
+        margin-left: 30px;
+        width: 400px;
+    }
+    .card {
+        margin-left: 120px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main__img {
+        margin-left: 30px;
+        width: 390px;
+    }
+    .card {
+        margin-left: 120px;
+    }
+    .footer {
+        width: 452px;
+    }
+
 }

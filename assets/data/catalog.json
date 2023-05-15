@@ -1,0 +1,58 @@
+[
+    {
+        "description": "Jacket FR204",
+        "price": 21000,
+        "img": "Jacket FR204.jpg",
+        "color": "Black",
+        "size": "M-L",
+        "stock": 5
+    },
+    {
+        "description": "Jean shorts",
+        "price": 4500,
+        "img": "Jean shorts.jpg",
+        "color": "Fuchsia",
+        "size": "36-44",
+        "stock": 10
+    },
+    {
+        "description": "Bikini one shoulder",
+        "price": 3000,
+        "img": "Bikini one shoulder.jpg",
+        "color": "Blue-Red-Black",
+        "size": "S-M-L",
+        "stock": 15
+    },
+    {
+        "description": "Printed modal Pupera T-shirt",
+        "price": 1500,
+        "img": "Printed modal Pupera T-shirt.jpg",
+        "color": "Pink-Grey",
+        "size": "S-M-L",
+        "stock": 15
+    },
+    {
+        "description": "Oxford Jean",
+        "price": 6700,
+        "img": "Oxford Jean.jpg",
+        "color": "Black",
+        "size": "36-40",
+        "stock": 20
+    },
+    {
+        "description": "Microfiber catsuit with closure",
+        "price": 4500,
+        "img": "Microfiber catsuit with closure.jpg",
+        "color": "Blue-Red",
+        "size": "S-M-L",
+        "stock": 7
+    },
+    {
+        "description": "MTV printed T-shirt",
+        "price": 1500,
+        "img": "MTV printed T-shirt.jpg",
+        "color": "Yellow-Pink-Blue",
+        "size": "S-M",
+        "stock": 12
+    }
+]

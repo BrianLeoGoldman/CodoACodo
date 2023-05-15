@@ -27,43 +27,27 @@
             </div>
         </header>
 
-        <main class="catalog">
+        <main class="catalog" id="catalog">
 
             <div class="content" id="content">
 
-                <div class="section-cards">
+                <div class="section-cards" v-for="product in catalog">
                     <div class="card">
                         <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 1</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 2</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 3</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 4</p>
-                            <p class="price">$XXXX</p>                          
+                            <img :src="product.img" />
+                            <p class="description">{{product.description}}</p>
+                            <p class="price">${{product.price}}</p>  
+                            <p class="price">{{product.color}}</p>  
+                            <p class="price">{{product.size}}</p>  
+                            <p class="price">{{product.stock}}</p>  
+                            <button v-on:click="addItemToCart">ADD</button>
+                            <!-- <a href="./cart.html"><img class="a__img" src="../media/icons/cart.png"/></a>      -->                   
                         </div>
                     </div>
 
                 </div>
 
-                <div class="section-cards">
+                <!-- <div class="section-cards">
                     <div class="card">
                         <div class="content-img">
                             <img src="../media/images/combo1.jpg" alt="">
@@ -93,9 +77,8 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
             </div>
-            
         </main>
 
         <footer class="footer">
@@ -112,4 +95,6 @@
         </footer>
 
     </body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="../js/catalog.js"></script>
 </html>

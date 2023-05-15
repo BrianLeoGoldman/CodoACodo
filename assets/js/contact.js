@@ -1,4 +1,4 @@
-import { storage } from "../js/storage.js";
+import { storage } from "./storage.js";
 const { createApp } = Vue;
 
 const idParent = "form";

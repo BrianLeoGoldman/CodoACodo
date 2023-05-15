@@ -24,6 +24,12 @@ const app = {
                 console.log(error);
             }
         },
+        addItemToCart: function () {
+            console.log("Item added to cart")
+        }
+    },
+    mounted() {
+        this.getCatalog();
     },
 };
 

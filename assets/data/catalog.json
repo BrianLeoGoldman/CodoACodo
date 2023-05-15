@@ -38,5 +38,21 @@
         "color": "Black",
         "size": "36-40",
         "stock": 20
+    },
+    {
+        "description": "Microfiber catsuit with closure",
+        "price": 4500,
+        "img": "Microfiber catsuit with closure.jpg",
+        "color": "Blue-Red",
+        "size": "S-M-L",
+        "stock": 7
+    },
+    {
+        "description": "MTV printed T-shirt",
+        "price": 1500,
+        "img": "MTV printed T-shirt.jpg",
+        "color": "Yellow-Pink-Blue",
+        "size": "S-M",
+        "stock": 12
     }
 ]

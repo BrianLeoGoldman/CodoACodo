@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 @keyframes rotate {
     from {
         transform: rotate(0deg)
     }
+
     to {
         transform: rotate(-360deg)
     }
@@ -11,15 +14,19 @@
     0% {
         transform: scale(1, 1);
     }
+
     25% {
         transform: scale(1.25, 1.25);
     }
+
     50% {
         transform: scale(1, 1);
     }
+
     75% {
         transform: scale(1.25, 1.25);
     }
+
     100% {
         transform: scale(1, 1);
     }
@@ -29,15 +36,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
+
+/* HEADER */
+
 .header {
     background-color: white;
-    box-shadow: 0 0 10px rgb(212, 24, 190);
+    box-shadow: 0 0 10px rgba(212, 24, 190);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header .logo {
     font-size: 50px;
     font-weight: 700;
@@ -48,10 +59,12 @@
     border-radius: 10px;
     margin-left: 20px;
 }
+
 .header .logo:hover {
     animation: rotate 1s ease infinite;
     filter: drop-shadow(0 0 0.5em #f403d0);
 }
+
 .header .header__container {
     max-width: 1100px;
     max-height: 100px;
@@ -61,14 +74,17 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .header .header__container .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
 }
+
 .header .header__container .navbar .navbar__link {
-    font-family: 'Indie Flower', cursive;
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Architects Daughter', cursive;
     /* font-family: 'Pacifico', cursive; */
     /* font-family: 'Sedgwick Ave Display', cursive; */
     font-weight: 700;
@@ -80,6 +96,7 @@
     letter-spacing: 5px;
     text-decoration: none;
 }
+
 .header .cart-widget {
     display: flex;
     flex-direction: column;
@@ -91,14 +108,185 @@
     border-radius: 10px;
     margin-right: 20px;
 }
+
 .header .cart-widget .cart-logo {
-    height:2.5em;
+    height: 2.5em;
 }
+
 .header .cart-widget .cart-counter {
     height: 1.5em;
     font-size: larger;
     font-weight: 700;
     color: black;
+}
+
+/* MAIN */
+
+.main__img {
+    margin-top: 20px;
+    margin-left: 120px;
+    width: 1200px;
+    border-radius: 8px;
+}
+
+.main__container {
+    width: 100%;
+    display: flex;
+}
+
+.card {
+    margin: 20px;
+    background: rgba(234, 128, 202, 0.496);
+    box-shadow: 0px 1px 10px rgba(234, 128, 202, 0.496);
+    cursor: default;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
+    transition: all .3s;
+    transform: translateY(-3%);
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.card__conteiner {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.card__conteiner h3 {
+    color: rgb(212, 24, 190);
+}
+
+.a__img {
+    width: 25px;
+    background-color: transparent;
+}
+
+/* CATALOG */
+
+.catalog {
+    max-width: 1100px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.content .section-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.content .section-cards .card {
+    max-width: 210px;
+    padding: 30px;
+    height: 250px;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.content .section-cards .card img {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.content .section-cards .card .description {
+    color:rgb(212, 24, 190);
+    font-weight: bold;
+}
+
+.content .section-cards .card .price {
+    color:rgb(212, 24, 190);
+    font-size: 20px;
+}
+
+
+/* CONTACT */
+
+.main__form {
+    width: 1000px;
+    background: rgba(234, 128, 202, 0.496);
+    padding: 30px;
+    margin: 60px 100px 60px 200px;
+    border-radius: 8px;
+    font-family: 'Architects Daughter', cursive;
+    color: black;
+    box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
+}
+
+.main__form h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(162, 37, 133);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.main__section {
+    display: flex;
+    font-size: 25px;
+}
+
+.section__form {
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 10px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+form ::placeholder {
+    color: rgb(162, 37, 133);
+    font-family: 'Architects Daughter', cursive;
+}
+
+.form--lastname {
+    margin: 5px 0px 5px 0px;
+}
+
+.form--coment {
+    margin-top: 5px;
+}
+
+.main__section img {
+    width: 500px;
+    height: 100%;
+    border-radius: 8px;
+    margin-left: 30px;
+}
+
+.section__bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section--input {
+    background-color: rgb(162, 37, 133);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 2px;
+    margin: 2px;
 }
 
 /* FOOTER */
@@ -111,9 +299,10 @@
     background-color: rgb(162, 37, 133);
     box-shadow: 0 0 5px #1854af;
     text-align: center;
-    width: 100%;     
+    width: 100%;
     padding-bottom: 2px;
 }
+
 .footer .text {
     width: 50%;
     display: flex;
@@ -124,10 +313,12 @@
 
 .footer .text .footer-text {
     color: white;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Architects Daughter', cursive;
+    /* font-family: 'Indie Flower', cursive; */
     font-size: 1.5rem;
-    padding-top: 5px; 
+    padding-top: 5px;
 }
+
 .footer .logos {
     width: 50%;
     display: flex;
@@ -135,9 +326,179 @@
     justify-content: space-around;
     align-items: center;
 }
+
 .footer .logos img {
     width: 50px;
     height: 50px;
     margin: 5px;
 }
 
+/*-------------------------------MEDIA QUERY-----------------------------*/
+@media screen and (max-width: 1400px) {
+    .main__img {
+        margin-left: 115px;
+        width: 1100px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .main__img {
+        margin-left: 110px;
+        width: 1050px;
+        margin-top: 25px;
+    }
+    .main {
+        height: 800px;
+    }
+    .card {
+        margin: 25px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main__img {
+        margin-left: 105px;
+        width: 1000px;
+    }
+    .main__container {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main__img {
+        margin-left: 100px;
+        width: 950px;
+    }
+    .main__container {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main__img {
+        margin-left: 60px;
+        width: 900px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main__img {
+        margin-left: 30px;
+        width: 850px;
+    }
+    .main__container {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main__img {
+        margin-left: 85px;
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        height: 1200px;
+    }
+    .header .logo {
+        height: 1.2em;
+    }
+    .header .header__container .navbar .navbar__link {
+        font-size: 20px;
+    }
+    .header .cart-widget .cart-logo {
+        height: 2em;
+    }
+    .header .cart-widget .cart-counter {
+        height: 1em;
+    }
+    .main__container {
+        display:inline;
+    }
+    .main__img {
+        margin-left: 80px;
+        width: 550px;
+    }
+    .card {
+        width: 250px;
+        margin-left: 220px;
+    }
+    .card__img {
+        width: 250px;
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .header .header__container .navbar .navbar__link {
+        font-size: 15px;
+    }
+    .header .cart-widget .cart-logo {
+        height: 1.6em;
+    }
+    .main__img {
+        margin-left: 60px;
+        width: 500px;
+    }
+    .card {
+        margin-left: 180px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main__img {
+        margin-left: 60px;
+        width: 400px;
+    }
+    .card {
+        width: 250px;
+        margin-left: 160px;
+    }
+    .card {
+        width: 200px;
+    }
+    .card__img {
+        width: 200px;
+        height: 100%;
+    }
+    .header .header__container .navbar {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header .header__container .navbar {
+        gap: 1px;
+    }
+    .header .cart-widget .cart-counter {
+        height: 0.8em;
+        font-size: small;
+    }
+    .header .cart-widget .cart-logo {
+        height: 1em;
+    }
+    .main__img {
+        margin-left: 30px;
+        width: 400px;
+    }
+    .card {
+        margin-left: 120px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main__img {
+        margin-left: 30px;
+        width: 390px;
+    }
+    .card {
+        margin-left: 120px;
+    }
+    .footer {
+        width: 452px;
+    }
+}

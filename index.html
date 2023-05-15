@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet"> 
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Sedgwick+Ave+Display&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="icon" type="image/x-icon" href="./assets/media/icons/logo.png">
         <title>Marylu - Inicio</title>
+
     </head>
+
     <body>
+      
         <header class="header">
             <img class="logo" src="./assets/media/icons/logo.png" alt='LOGO'/>
             <div class="header__container">
                 <nav class="navbar">
-                    <a href='./index.html' class="navbar__link">INICIO</a>
-                    <a href='./assets/pages/catalog.html' class="navbar__link">CATALOGO</a>
-                    <a href='./assets/pages/contact.html' class="navbar__link">CONTACTO</a>
+                    <a href='./index.html' class="navbar__link">HOME</a>
+                    <a href='./assets/pages/catalog.html' class="navbar__link">CATALOG</a>
+                    <a href='./assets/pages/contact.html' class="navbar__link">CONTACT</a>
                 </nav>
             </div>
             <div class="cart-widget">
@@ -27,12 +37,21 @@
             </div>
         </header>
 
-        <main>
-            <section>
-                <marquee behavior="" direction="">
-                    <h1>ESTA PAGINA ES EL INICIO</h1>
-                </marquee>
-            </section>
+        <main class="main" id="app">
+            <img class="main__img" src="./assets/media/images/bigcard.jpg" alt="cardmain">
+            <div class="main__container" id="packs" >
+                <div class="card" v-for="pack in packs">
+                    <section>
+                        <img class="card__img" :src="pack.img" />
+                    </section>
+                    <section class="card__conteiner">
+                        <h3>{{pack.name}}</h3>
+                        <p>{{pack.content}}</p>
+                        <p>{{pack.price}}</p>
+                        <a href="./assets/pages/cart.html"><img class="a__img" src="./assets/media/icons/cart.png"/></a>
+                    </section>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">
@@ -49,4 +68,6 @@
         </footer>
 
     </body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="./assets/js/index.js"></script>
 </html>

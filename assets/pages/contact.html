@@ -16,9 +16,9 @@
             <img class="logo" src="../media/icons/logo.png" alt='LOGO'/>
             <div class="header__container">
                 <nav class="navbar">
-                    <a href='../../index.html' class="navbar__link">INICIO</a>
-                    <a href='./catalog.html' class="navbar__link">CATALOGO</a>
-                    <a href='./contact.html' class="navbar__link">CONTACTO</a>
+                    <a href='../../index.html' class="navbar__link">HOME</a>
+                    <a href='./catalog.html' class="navbar__link">CATALOG</a>
+                    <a href='./contact.html' class="navbar__link">CONTACT</a>
                 </nav>
             </div>
             <div class="cart-widget">
@@ -27,11 +27,35 @@
             </div>
         </header>
 
-        <main>
-            <section>
-                <marquee behavior="" direction="">
-                    <h1>ESTA PAGINA ES EL FORMULARIO DE CONTACTO</h1>
-                </marquee>
+        <main class="main__form" id="form">
+            <h4>CONTACT</h4>
+            <section class="main__section">
+                <fieldset>
+                <form action="" method="" enctype="" class="section__form">
+                    <div>
+                        <label for="Nombre">Name: </label>
+                        <input v-model.lazy="contact.name" type="text" placeholder="Jhon">
+                    </div>
+                    <div class="form--lastname">
+                        <label for="Apellido">Lastname: </label>
+                        <input v-model.lazy="contact.lastname" type="text" placeholder="Doe">
+                    </div>
+                    <div>
+                        <label for="Correo">Email: </label>
+                        <input v-model.lazy="contact.email" type="mail" placeholder="jhondoe@marylu.com">
+                    </div>
+                    <div class="form--coment">
+                        <h3>What's up?</h3>
+                        <textarea v-model.lazy="contact.comment" cols="40" rows="6" placeholder=" Leave a comment..."></textarea>
+                    </div>
+                    <div class="section__bottom">
+                        <input class="section--input" type="submit" v-on:click.prevent="sendContact">
+                        <input class="section--input" type="reset" v-on:click.prevent="resetContact">
+                    </div>
+                </form>
+            </fieldset>
+                <img src="../media/images/contact.jpg" alt="imagenContacto">
+
             </section>
         </main>
 
@@ -49,4 +73,6 @@
         </footer>
 
     </body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="../js/form.js"></script>
 </html>

@@ -27,7 +27,8 @@
             </div>
         </header>
 
-        <main class="catalog">
+        <main class="catalog" id="catalog">
+            <button v-on:click.prevent="getCatalog">FETCH</button>
 
             <div class="content" id="content">
 
@@ -112,4 +113,6 @@
         </footer>
 
     </body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="../js/catalog.js"></script>
 </html>

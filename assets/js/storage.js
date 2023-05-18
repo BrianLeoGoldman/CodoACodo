@@ -10,13 +10,15 @@ class StorageManager {
 
     addToCart(product) {
         let cart = this.load("cart");
-        cart.push(product);
+        cart.some((item) => {return item.description === product.description}) 
+            ? cart.map((item) => item.description === product.description && item.stock++)
+            : cart.push(product);
         this.save("cart", cart); 
     }
 
     constructor() {
         localStorage.setItem("contact", "");
-        localStorage.setItem("cart", []);
+        localStorage.setItem("cart", "[]");
     }
 }
 

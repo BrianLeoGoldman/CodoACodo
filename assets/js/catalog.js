@@ -24,8 +24,16 @@ const app = {
                 console.log(error);
             }
         },
-        addItemToCart: function () {
-            console.log("Item added to cart")
+        addItemToCart: function (product) {
+            let productToAdd = {
+                description: product.description,
+                price: product.price,
+                img: product.img,
+                color: product.color,
+                size: product.size,
+                stock: 1
+            }
+            storage.addToCart(productToAdd)
         }
     },
     mounted() {

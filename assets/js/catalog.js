@@ -18,7 +18,6 @@ const app = {
                 data.forEach(product => {
                     product.img = imgPath + product.img
                     this.catalog.push(product)
-                    console.log(product)
                 });
             } catch(error) {
                 console.log(error);
@@ -39,7 +38,12 @@ const app = {
                 storage.addToCart(productToAdd)
             }
             else {
-                console.log("Out of stock")
+                Swal.fire({
+                    title: `No stock`, 
+                    text: `Item ${product.description} is out of stock`, 
+                    icon: "warning",
+                    confirmButtonText: "OK",
+                });
             }
         }
     },

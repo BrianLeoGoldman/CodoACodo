@@ -25,15 +25,22 @@ const app = {
             }
         },
         addItemToCart: function (product) {
-            let productToAdd = {
-                description: product.description,
-                price: product.price,
-                img: product.img,
-                color: product.color,
-                size: product.size,
-                stock: 1
+            let item = this.catalog.find((item) => item.description == product.description)
+            if (item.stock > 0) {
+                let productToAdd = {
+                    description: product.description,
+                    price: product.price,
+                    img: product.img,
+                    color: product.color,
+                    size: product.size,
+                    stock: 1
+                }
+                item.stock--
+                storage.addToCart(productToAdd)
             }
-            storage.addToCart(productToAdd)
+            else {
+                console.log("Out of stock")
+            }
         }
     },
     mounted() {

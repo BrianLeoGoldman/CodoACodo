@@ -1,19 +1,24 @@
 class StorageManager {
 
-    constructor() {
-        if(isNaN (this.load("cart"))) {
-            localStorage.setItem("cart", "[]");
-        }
-    }
-
     load(key) {
-        return JSON.parse(localStorage.getItem(key));
+        return JSON.parse(localStorage.getItem(key))
     }
 
     save(key, dataToSave) {
-        /* let toStorage = this.load(key);
-        toStorage.push(dataToSave); */
         localStorage.setItem(key, JSON.stringify(dataToSave));
+    }
+
+    addToCart(product) {
+        let cart = this.load("cart");
+        cart.some((item) => {return item.description === product.description}) 
+            ? cart.map((item) => item.description === product.description && item.stock++)
+            : cart.push(product);
+        this.save("cart", cart); 
+    }
+
+    constructor() {
+        localStorage.setItem("contact", "");
+        localStorage.setItem("cart", "[]");
     }
 }
 

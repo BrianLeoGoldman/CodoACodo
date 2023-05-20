@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="../css/style.css">
         <link rel="icon" type="image/x-icon" href="../media/icons/logo.png">
-        <title>Marylu - Catalogo</title>
+        <title>Marylu - Catalog</title>
     </head>
     <body>
         <header class="header">
@@ -27,75 +27,26 @@
             </div>
         </header>
 
-        <main class="catalog">
+        <main class="catalog" id="catalog">
 
             <div class="content" id="content">
 
-                <div class="section-cards">
+                <div class="section-cards" v-for="product in catalog">
                     <div class="card">
                         <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 1</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 2</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 3</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 4</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="section-cards">
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 5</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 6</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 7</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 8</p>
-                            <p class="price">$XXXX</p>                          
+                            <img :src="product.img" />
+                            <p class="description">{{product.description}}</p>
+                            <p class="price">${{product.price}}</p>  
+                            <p class="color">{{product.color}}</p>  
+                            <p class="size">{{product.size}}</p>  
+                            <p :class="product.stock > 3 ? 'stock-high' : 'stock-low'">{{product.stock}}</p>
+                            <!-- Cambia la class del stock segun el numero de stock: rojo si hay < 3 o verde si hay > 3 -->
+                            <button v-on:click="addItemToCart(product)">ADD</button>
                         </div>
                     </div>
 
                 </div>
             </div>
-            
         </main>
 
         <footer class="footer">
@@ -112,4 +63,7 @@
         </footer>
 
     </body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="../js/catalog.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

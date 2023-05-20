@@ -7,6 +7,7 @@ const idParent = "app";
 const app = {
     data: () => {
         return {
+            loading: true,
             packs: [
                 /* {name: "PACK 1", content: "SHIRT + PANTS + SOCKS", price: "$1000", img: "./assets/media/images/promos/Combo1.jpg"},
                 {name: "PACK 2", content: "HOODIE + CAP + SCARF", price: "$2000", img: "./assets/media/images/promos/Combo2.jpg"},
@@ -26,6 +27,7 @@ const app = {
                 const shuffled = this.packs.sort(() => 0.5 - Math.random());
                 console.log(shuffled)
                 this.packs = shuffled.slice(0, 3);
+                this.loading = !this.loading
             } catch(error) {
                 console.log(error);
             }

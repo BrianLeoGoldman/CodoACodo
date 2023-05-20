@@ -39,7 +39,8 @@
 
         <main class="main" id="app">
             <img class="main__img" src="./assets/media/images/bigcard.jpg" alt="cardmain">
-            <div class="main__container" id="packs" >
+            <img v-if="loading" class="spinner__img" src="./assets/media/icons/spinner-solid.svg" alt="Spinner">
+            <div v-else class="main__container" id="packs" >
                 <div class="card" v-for="pack in packs">
                     <section>
                         <img class="card__img" :src="pack.img" />

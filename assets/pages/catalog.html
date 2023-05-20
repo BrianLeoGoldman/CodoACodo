@@ -37,46 +37,15 @@
                             <img :src="product.img" />
                             <p class="description">{{product.description}}</p>
                             <p class="price">${{product.price}}</p>  
-                            <p class="price">{{product.color}}</p>  
-                            <p class="price">{{product.size}}</p>  
-                            <p class="price">{{product.stock}}</p>  
+                            <p class="color">{{product.color}}</p>  
+                            <p class="size">{{product.size}}</p>  
+                            <p :class="product.stock > 3 ? 'stock-high' : 'stock-low'">{{product.stock}}</p>
+                            <!-- Cambia la class del stock segun el numero de stock: rojo si hay < 3 o verde si hay > 3 -->
                             <button v-on:click="addItemToCart(product)">ADD</button>
                         </div>
                     </div>
 
                 </div>
-
-                <!-- <div class="section-cards">
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 5</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 6</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 7</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content-img">
-                            <img src="../media/images/combo1.jpg" alt="">
-                            <p class="description">CARD 8</p>
-                            <p class="price">$XXXX</p>                          
-                        </div>
-                    </div>
-
-                </div> -->
             </div>
         </main>
 

@@ -8,12 +8,16 @@ const app = {
         return {
             cartEmpty: true,
             cartContent: [],
+            total: 0
         };
     },
     methods: {
         checkEmptyCart: function () {
             if (this.cartContent.length > 0) {
                 this.cartEmpty = false
+                this.total = this.cartContent
+                    .map((elem) => elem.stock * elem.price)
+                    .reduce((a, b) => a + b, 0)
             }
             else {
                 this.cartEmpty = true

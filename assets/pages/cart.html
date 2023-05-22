@@ -27,8 +27,8 @@
             </div>
         </header>
 
-        <main class="cart">
-            <section class="items__section" id="cart">
+        <main class="cart" id="cart">
+            <section class="items__section">
                 <div class="empty__cart" v-if="cartEmpty">
                     <h2>The cart is empty</h2>
                     <h3>Please choose some items from our <a href='./catalog.html'>catalog</a></h3>
@@ -48,7 +48,15 @@
                 </div>
             </section>
             <section class="payment__section">
-
+                <div v-if="cartEmpty">
+                    <img src="../media/images/shopping.jpg" />
+                </div>
+                <div class="cart__count__container" v-else>
+                    <div class="cart__count" v-for="item in cartContent">
+                        <p>+ {{item.stock * item.price}}</p>
+                    </div>
+                    <p>TOTAL: {{total}}</p>
+                </div>
             </section>
         </main>
 

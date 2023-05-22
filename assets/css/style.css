@@ -367,6 +367,11 @@ form ::placeholder {
     border-radius: 8px;
 }
 
+.cart__count__container {
+    display: flex;
+    flex-direction: column;
+}
+
 /* FOOTER */
 
 .footer {

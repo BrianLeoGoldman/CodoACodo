@@ -1,4 +1,4 @@
-import { reduceElementAmount } from "./functions.js";
+import { reduceElementAmount, removeAllItems } from "./functions.js";
 
 class StorageManager {
 
@@ -26,7 +26,9 @@ class StorageManager {
     }
 
     removeFromCart(item) {
-
+        let cart = this.load("cart")
+        cart = removeAllItems(cart, item)
+        this.save("cart", cart)
     }
 
     constructor() {

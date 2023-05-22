@@ -11,13 +11,19 @@ const app = {
         };
     },
     methods: {
+        checkEmptyCart: function () {
+            if (this.cartContent.length > 0) {
+                this.cartEmpty = false
+            }
+            else {
+                this.cartEmpty = true
+            }
+        },
         getCartContent: function () {
             try {
                 let cart = storage.load("cart")
                 this.cartContent = cart
-                if (cart.length > 0) {
-                    this.cartEmpty = false
-                }
+                this.checkEmptyCart()
             } catch(error) {
                 console.log(error);
             }

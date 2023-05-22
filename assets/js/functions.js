@@ -18,3 +18,8 @@ function removeItemsWithNoStock(array) {
     let newArray = array.filter((elem) => elem.stock > 0)
     return newArray
 }
+
+export function removeAllItems(array, item) {
+    let newArray = array.filter((elem) => elem.description != item.description)
+    return newArray
+}

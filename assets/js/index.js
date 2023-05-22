@@ -10,6 +10,7 @@ const app = {
         return {
             loading: true,
             packs: [],
+            cartTotal: storage.getCartTotal()
         };
     },
     methods: {

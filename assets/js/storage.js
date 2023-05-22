@@ -10,6 +10,11 @@ class StorageManager {
         localStorage.setItem(key, JSON.stringify(dataToSave));
     }
 
+    getCartTotal() {
+        let cart = this.load("cart");
+        return cart.length
+    }
+
     addToCart(product) {
         let cart = this.load("cart");
         cart.some((item) => {return item.description === product.description}) 

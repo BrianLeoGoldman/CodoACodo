@@ -12,7 +12,7 @@
         <title>Marylu - Catalog</title>
     </head>
     <body>
-        <header class="header">
+        <header class="header" id="nav">
             <img class="logo" src="../media/icons/logo.png" alt='LOGO'/>
             <div class="header__container">
                 <nav class="navbar">
@@ -23,7 +23,7 @@
             </div>
             <div class="cart-widget">
                 <a href="./cart.html"><img class="cart-logo" src="../media/icons/cart.png"/></a>
-                <span class="cart-counter">0</span>
+                <span class="cart-counter" v.model.lazy="cartTotal">{{cartTotal}}</span>
             </div>
         </header>
 
@@ -64,6 +64,7 @@
 
     </body>
     <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="../js/nav.js"></script>
     <script type="module" src="../js/catalog.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

@@ -1,3 +1,5 @@
+import { reduceElementAmount, removeAllItems } from "./functions.js";
+
 class StorageManager {
 
     load(key) {
@@ -8,6 +10,11 @@ class StorageManager {
         localStorage.setItem(key, JSON.stringify(dataToSave));
     }
 
+    getCartTotal() {
+        let cart = this.load("cart");
+        return cart.length
+    }
+
     addToCart(product) {
         let cart = this.load("cart");
         cart.some((item) => {return item.description === product.description}) 
@@ -16,10 +23,32 @@ class StorageManager {
         this.save("cart", cart); 
     }
 
-    constructor() {
-        localStorage.setItem("contact", "");
+    reduceStockFromCart(item) {
+        let cart = this.load("cart")
+        cart = reduceElementAmount(cart, item)
+        this.save("cart", cart)
+        
+    }
+
+    removeFromCart(item) {
+        let cart = this.load("cart")
+        cart = removeAllItems(cart, item)
+        this.save("cart", cart)
+    }
+
+    emptyCart() {
         localStorage.setItem("cart", "[]");
     }
+
+    constructor() {
+        if(localStorage.getItem("cart") === null) {
+            localStorage.setItem("cart", "[]");
+        }
+        if(localStorage.getItem("contact") === null) {
+            localStorage.setItem("contact", "");
+        }
+    }
+
 }
 
 export const storage = new StorageManager();

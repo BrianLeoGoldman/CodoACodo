@@ -14,6 +14,7 @@ const app = {
         getCartContent: function () {
             try {
                 let cart = storage.load("cart")
+                this.cartContent = cart
                 if (cart.length > 0) {
                     this.cartEmpty = !this.cartEmpty
                 }
@@ -21,6 +22,12 @@ const app = {
                 console.log(error);
             }
         },
+        removeUnit: function (item) {
+            this.cartContent.map((elem) => elem.description === item.description && ((elem.stock > 0) && elem.stock--))
+        },
+        removeAll: function (item) {
+            this.cartContent = this.cartContent.filter((elem) => elem.description !== item.description)
+        }
     },
     mounted() {
         this.getCartContent();

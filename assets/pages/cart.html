@@ -27,12 +27,27 @@
             </div>
         </header>
 
-        <main>
-            <section id="cart">
-                <div v-if="cartEmpty"><h2>Esta vacio</h2></div>
-                <div v-else><h2>No esta vacio</h2></div>
+        <main class="cart">
+            <section class="items__section" id="cart">
+                <div class="empty__cart" v-if="cartEmpty">
+                    <h2>The cart is empty</h2>
+                    <h3>Please choose some items from our <a href='./catalog.html'>catalog</a></h3>
+                </div>
+                <div class="not__empty__cart" v-else>
+                    <div class="item__in__cart" v-for="item in cartContent">
+                        <img class="item__img" :src="item.img" />
+                        <div>
+                            <h3>{{item.description}}</h3>
+                            <p>${{item.price}}</p>
+                            <p>UNITS: {{item.stock}}</p>
+                            <p>SUBTOTAL: {{item.stock * item.price}}</p>
+                            <button v-on:click="removeUnit(item)">REMOVE UNIT</button>
+                            <button v-on:click="removeAll(item)">REMOVE ALL</button>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section>
+            <section class="payment__section">
 
             </section>
         </main>

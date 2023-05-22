@@ -28,10 +28,12 @@
         </header>
 
         <main>
+            <section id="cart">
+                <div v-if="cartEmpty"><h2>Esta vacio</h2></div>
+                <div v-else><h2>No esta vacio</h2></div>
+            </section>
             <section>
-                <marquee behavior="" direction="">
-                    <h1>ESTA PAGINA ES EL CARRITO DE COMPRAS</h1>
-                </marquee>
+
             </section>
         </main>
 
@@ -49,4 +51,6 @@
         </footer>
 
     </body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="../js/cart.js"></script>
 </html>

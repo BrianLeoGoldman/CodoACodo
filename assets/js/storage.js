@@ -17,9 +17,14 @@ class StorageManager {
     }
 
     constructor() {
-        localStorage.setItem("contact", "");
-        localStorage.setItem("cart", "[]");
+        if(localStorage.getItem("cart") === null) {
+            localStorage.setItem("cart", "[]");
+        }
+        if(localStorage.getItem("contact") === null) {
+            localStorage.setItem("contact", "");
+        }
     }
+
 }
 
 export const storage = new StorageManager();

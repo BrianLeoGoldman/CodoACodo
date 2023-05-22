@@ -8,7 +8,9 @@ const app = {
         return {
             cartEmpty: true,
             cartContent: [],
-            total: 0
+            total: 0,
+            deliveryMethod: null,
+            paymentMethod: null
         };
     },
     methods: {
@@ -39,6 +41,16 @@ const app = {
         removeAll: function (item) {
             storage.removeFromCart(item)
             this.getCartContent()
+        },
+        buyCart: function () {
+            storage.emptyCart()
+            this.getCartContent()
+            Swal.fire({
+                title: `Purchase successful`, 
+                text: `You have successfully completed your purchase. Thanks a lot!`, 
+                icon: "success",
+                confirmButtonText: "OK",
+            });
         }
     },
     mounted() {

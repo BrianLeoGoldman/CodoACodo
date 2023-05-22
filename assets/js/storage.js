@@ -31,6 +31,10 @@ class StorageManager {
         this.save("cart", cart)
     }
 
+    emptyCart() {
+        localStorage.setItem("cart", "[]");
+    }
+
     constructor() {
         if(localStorage.getItem("cart") === null) {
             localStorage.setItem("cart", "[]");

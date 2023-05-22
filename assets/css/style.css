@@ -367,7 +367,37 @@ form ::placeholder {
     border-radius: 8px;
 }
 
-.cart__count__container {
+.payment__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.total__count {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery__method {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery__method__option {
+    display: flex;
+    flex-direction: row;
+}
+
+.payment__method {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment__method__option {
+    display: flex;
+    flex-direction: row;
+}
+
+.button__panel {
     display: flex;
     flex-direction: column;
 }

@@ -37,11 +37,10 @@
                             <img :src="product.img" />
                             <p class="description">{{product.description}}</p>
                             <p class="price">${{product.price}}</p>  
-                            <p class="color">{{product.color}}</p>  
                             <p class="size">{{product.size}}</p>  
                             <p :class="product.stock > 3 ? 'stock-high' : 'stock-low'">{{product.stock}}</p>
                             <!-- Cambia la class del stock segun el numero de stock: rojo si hay < 3 o verde si hay > 3 -->
-                            <button v-on:click="addItemToCart(product)">ADD</button>
+                            <button v-on:click="addItemToCart(product)"><img class="add" src="../media/icons/cart.png"/></button>
                         </div>
                     </div>
 

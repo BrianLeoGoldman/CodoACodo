@@ -16,17 +16,19 @@ const app = {
                 let cart = storage.load("cart")
                 this.cartContent = cart
                 if (cart.length > 0) {
-                    this.cartEmpty = !this.cartEmpty
+                    this.cartEmpty = false
                 }
             } catch(error) {
                 console.log(error);
             }
         },
         removeUnit: function (item) {
-            this.cartContent.map((elem) => elem.description === item.description && ((elem.stock > 0) && elem.stock--))
+            storage.reduceStockFromCart(item)
+            this.getCartContent()
         },
         removeAll: function (item) {
-            this.cartContent = this.cartContent.filter((elem) => elem.description !== item.description)
+            storage.removeFromCart(item)
+            this.getCartContent()
         }
     },
     mounted() {

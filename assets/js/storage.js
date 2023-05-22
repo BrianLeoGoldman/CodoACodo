@@ -1,3 +1,5 @@
+import { reduceElementAmount } from "./functions.js";
+
 class StorageManager {
 
     load(key) {
@@ -14,6 +16,17 @@ class StorageManager {
             ? cart.map((item) => item.description === product.description && item.stock++)
             : cart.push(product);
         this.save("cart", cart); 
+    }
+
+    reduceStockFromCart(item) {
+        let cart = this.load("cart")
+        cart = reduceElementAmount(cart, item)
+        this.save("cart", cart)
+        
+    }
+
+    removeFromCart(item) {
+
     }
 
     constructor() {

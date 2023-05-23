@@ -22,7 +22,7 @@
 
     <body>
       
-        <header class="header">
+        <header class="header" id="nav">
             <img class="logo" src="./assets/media/icons/logo.png" alt='LOGO'/>
             <div class="header__container">
                 <nav class="navbar">
@@ -33,14 +33,16 @@
             </div>
             <div class="cart-widget">
                 <a href="./assets/pages/cart.html"><img class="cart-logo" src="./assets/media/icons/cart.png"/></a>
-                <span class="cart-counter">0</span>
+                <span class="cart-counter" v.model.lazy="cartTotal">{{cartTotal}}</span>
             </div>
         </header>
 
         <main class="main" id="app">
             <img class="main__img" src="./assets/media/images/bigcard.jpg" alt="cardmain">
+
             <img v-if="loading" class="spinner__img" src="./assets/media/videos/NRI0.gif" alt="Spinner">
-            <div v-else class="main__container" id="packs" >
+            <div v-else class="main__container">
+
                 <div class="card" v-for="pack in packs">
                     <section>
                         <img class="card__img" :src="pack.img" />
@@ -70,5 +72,6 @@
 
     </body>
     <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="./assets/js/nav.js"></script>
     <script type="module" src="./assets/js/index.js"></script>
 </html>

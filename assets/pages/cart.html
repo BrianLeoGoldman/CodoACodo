@@ -12,7 +12,7 @@
         <title>Marylu - Cart</title>
     </head>
     <body>
-        <header class="header">
+        <header class="header" id="nav">
             <img class="logo" src="../media/icons/logo.png" alt='LOGO'/>
             <div class="header__container">
                 <nav class="navbar">
@@ -23,15 +23,65 @@
             </div>
             <div class="cart-widget">
                 <a href="./cart.html"><img class="cart-logo" src="../media/icons/cart.png"/></a>
-                <span class="cart-counter">0</span>
+                <span class="cart-counter" v.model.lazy="cartTotal">{{cartTotal}}</span>
             </div>
         </header>
 
-        <main>
-            <section>
-                <marquee behavior="" direction="">
-                    <h1>ESTA PAGINA ES EL CARRITO DE COMPRAS</h1>
-                </marquee>
+        <main class="cart" id="cart">
+            <section class="items__section">
+                <div class="empty__cart" v-if="cartEmpty">
+                    <h2>The cart is empty</h2>
+                    <h3>Please choose some items from our <a href='./catalog.html'>catalog</a></h3>
+                </div>
+                <div class="not__empty__cart" v-else>
+                    <div class="item__in__cart" v-for="item in cartContent">
+                        <img class="item__img" :src="item.img" />
+                        <div>
+                            <h3>{{item.description}}</h3>
+                            <p>${{item.price}}</p>
+                            <p>UNITS: {{item.stock}}</p>
+                            <p>SUBTOTAL: {{item.stock * item.price}}</p>
+                            <button v-on:click="removeUnit(item)">REMOVE UNIT</button>
+                            <button v-on:click="removeAll(item)">REMOVE ALL</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="payment__section">
+                <div v-if="cartEmpty">
+                    <img src="../media/images/shopping.jpg" />
+                </div>
+                <div class="payment__container" v-else>
+                    <div class="total__count">
+                        <div v-for="item in cartContent">
+                            <p>+ {{item.stock * item.price}}</p>
+                        </div>
+                        <p>TOTAL: {{total}}</p>
+                    </div>
+                    <div class="delivery__method">
+                        <div class="delivery__method__option">
+                            <input type="radio" id="local" value="local" v-model="deliveryMethod" />
+                            <label for="local">Local</label>
+                        </div>
+                        <div class="delivery__method__option">
+                            <input type="radio" id="delivery" value="delivery" v-model="deliveryMethod" />
+                            <label for="delivery">Delivery</label>
+                        </div>
+                    </div>
+                    <div class="payment__method">
+                        <div class="payment__method__option">
+                            <input type="radio" id="cash" value="cash" v-model="paymentMethod" />
+                            <label for="cash">Cash</label>
+                        </div>
+                        <div class="payment__method__option">
+                            <input type="radio" id="card" value="card" v-model="paymentMethod" />
+                            <label for="card">Card</label>
+                        </div>
+                    </div>
+                    <div class="button__panel">
+                        <button v-on:click="buyCart">BUY</button>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -49,4 +99,9 @@
         </footer>
 
     </body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="../js/nav.js"></script>
+    <script type="module" src="../js/cart.js"></script>
+    <script type="module" src="../js/functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

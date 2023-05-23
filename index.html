@@ -39,8 +39,10 @@
 
         <main class="main" id="app">
             <img class="main__img" src="./assets/media/images/bigcard.jpg" alt="cardmain">
-            <img v-if="loading" class="spinner__img" src="./assets/media/icons/spinner-solid.svg" alt="Spinner">
+
+            <img v-if="loading" class="spinner__img" src="./assets/media/videos/NRI0.gif" alt="Spinner">
             <div v-else class="main__container">
+
                 <div class="card" v-for="pack in packs">
                     <section>
                         <img class="card__img" :src="pack.img" />
@@ -48,7 +50,7 @@
                     <section class="card__conteiner">
                         <h3>{{pack.name}}</h3>
                         <p>{{pack.content}}</p>
-                        <p>{{pack.price}}</p>
+                        <p>${{pack.price}}</p>
                         <a href="./assets/pages/cart.html"><img class="a__img" src="./assets/media/icons/cart.png"/></a>
                     </section>
                 </div>

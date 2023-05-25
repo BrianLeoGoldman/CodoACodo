@@ -232,7 +232,6 @@
     height: auto;
     text-align: center;
     margin: 0 10px;
-    cursor: pointer;
     border-radius: 8px;
     transition: .3s;
     border-width: 2px;
@@ -283,6 +282,7 @@
     width: 30px;
     height: auto;
     border: none;
+    cursor: pointer;
 }
 
 /* CONTACT */

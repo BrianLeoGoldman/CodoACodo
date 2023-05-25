@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Sedgwick+Ave+Display&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../media/icons/logo.png">
     <title>Marylu - Cart</title>
 </head>
@@ -33,7 +34,7 @@
 
     <main class="cart" id="cart">
         <div class="catalog" v-if="cartEmpty">
-            <h2>THE CART IS EMPTY</h2>
+            <h2>YOUR CART IS EMPTY</h2>
             <h3>Please choose some items</h3>
             <a href='./catalog.html'>CATALOG</a>
         </div>
@@ -61,7 +62,7 @@
             <div class="catalog" v-else>
                 <p class="total">TOTAL: $ {{total}}</p>
                 <div class="content_buttonbuy">
-                    <button class="button_buy"v-on:click="buyCart">Take it</button>
+                    <button class="button_buy" v-on:click="buyCart"><i class="icon-thumbs-up"> Take it</i></button>
                 </div> 
             </div>
         </section>

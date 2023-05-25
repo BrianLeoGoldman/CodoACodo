@@ -83,10 +83,7 @@
 }
 
 .header .header__container .navbar .navbar__link {
-    /* font-family: 'Indie Flower', cursive; */
     font-family: 'Architects Daughter', cursive;
-    /* font-family: 'Pacifico', cursive; */
-    /* font-family: 'Sedgwick Ave Display', cursive; */
     font-weight: 700;
     font-size: 30px;
     color: rgb(212, 24, 190);
@@ -129,15 +126,13 @@
 }
 
 .spinner__img {
-    width: 600px;
-    height: 600px;
+    width: 25%;
+    height: 25%;
     margin: 50px;
-    animation: rotate 2s ease infinite;
 }
 
 .main__img {
     margin-top: 20px;
-    margin-left: 120px;
     width: 1200px;
     border-radius: 8px;
 }
@@ -148,7 +143,7 @@
 }
 
 .card {
-    margin: 20px;
+    margin: 30px;
     background: rgba(234, 128, 202, 0.496);
     box-shadow: 0px 1px 10px rgba(234, 128, 202, 0.496);
     cursor: default;
@@ -164,8 +159,7 @@
 
 .card__img {
     width: 100%;
-    height: 100%;
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
 }
 
 .card__conteiner {
@@ -175,7 +169,7 @@
 }
 
 .card__conteiner h3 {
-    color: rgb(212, 24, 190);
+    color: rgb(162, 37, 133);
 }
 
 .a__img {
@@ -188,7 +182,33 @@
 .catalog {
     width: 100%;
     margin: 40px auto;
+}
+
+.catalog h2 {
+    margin-top: 10x;
+    margin-bottom: 30px;
+    background-color: rgb(162, 37, 133);
+    color: white;
+    font-size: 35px;
     display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
+    font-family: 'Architects Daughter', cursive;
+}
+
+.catalog a {
+    margin-top: 10x;
+    margin-bottom: 30px;
+    color: rgb(162, 37, 133);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.catalog h3 {
+    display: flex;
+    justify-content: center;
 }
 
 .content {
@@ -203,49 +223,48 @@
 .content .section-cards {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin: 0px 50px 40px 50px;
 }
 
 .content .section-cards .card {
     max-width: 210px;
     padding: 30px;
-    height: 450px;
+    height: auto;
     text-align: center;
     margin: 0 10px;
-    cursor: pointer;
     border-radius: 8px;
     transition: .3s;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(162, 37, 133);
 }
 
 .content .section-cards .card img {
-    width: 100%;
-    margin: 30px 0;
+    width: 150px;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(162, 37, 133);
+    border-radius: 8px;
 }
 
 .content .section-cards .card .description {
-    color:rgb(212, 24, 190);
+    color:rgb(162, 37, 133);
     font-weight: bold;
     font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .content .section-cards .card .price {
     color:rgb(212, 24, 190);
-    font-weight: bold;
     font-size: 20px;
 }
 
-.content .section-cards .card .color {
-    color:rgb(212, 24, 190);
-    font-size: 15px;
-}
-
 .content .section-cards .card .size {
-    color:rgb(212, 24, 190);
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .content .section-cards .card .stock-high {
-    color:rgb(10, 91, 38);
     font-size: 15px;
 }
 
@@ -254,6 +273,17 @@
     font-size: 15px;
 }
 
+.content .section-cards button {
+    border: none;
+    background: none;
+}
+
+.content .section-cards button .add {
+    width: 30px;
+    height: auto;
+    border: none;
+    cursor: pointer;
+}
 
 /* CONTACT */
 
@@ -327,6 +357,69 @@ form ::placeholder {
     margin: 2px;
 }
 
+/* CART */
+
+.catalog .total {
+    color: rgb(162, 37, 133);
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment__div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment__div img {
+    width: 25%;
+    margin-top: -75px;
+    margin-bottom: 25px;
+}
+
+.card .item_button {
+    display:flex;
+    margin-top: 10px;
+}
+
+.card .item_button button {
+    border-width: 1px;
+    border-style: solid;
+    background-color: rgb(162, 37, 133);
+    color: white;
+    border-color: rgb(162, 37, 133);
+    font-size: 12px;
+    border-radius: 8px;
+    margin: 2px;
+}
+
+.payment__section .catalog .content_buttonbuy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.payment__section .catalog .content_buttonbuy .button_buy{
+    border-width: 1px;
+    border-style: solid;
+    background-color: rgb(162, 37, 133);
+    color: white;
+    border-color: rgb(162, 37, 133);
+    font-size: 20px;
+    border-radius: 8px;
+    margin: 2px;
+    padding: 5px;
+    justify-content: center;
+}
+
 /* FOOTER */
 
 .footer {
@@ -352,7 +445,6 @@ form ::placeholder {
 .footer .text .footer-text {
     color: white;
     font-family: 'Architects Daughter', cursive;
-    /* font-family: 'Indie Flower', cursive; */
     font-size: 1.5rem;
     padding-top: 5px;
 }

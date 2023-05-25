@@ -1,0 +1,20 @@
+[
+    {
+        "name": "PACK 1", 
+        "content": "SHIRT + PANTS + SOCKS", 
+        "price": 1000, 
+        "img": "Combo1.jpg"
+    },
+    {
+        "name": "PACK 2", 
+        "content": "HOODIE + CAP + SCARF", 
+        "price": 2000, 
+        "img": "Combo2.jpg"
+    },
+    {
+        "name": "PACK 3", 
+        "content": "JACKET + GLOVES + SOCKS", 
+        "price": 3000, 
+        "img": "Combo3.jpg"
+    }
+]

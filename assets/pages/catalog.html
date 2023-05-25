@@ -12,7 +12,7 @@
         <title>Marylu - Catalog</title>
     </head>
     <body>
-        <header class="header">
+        <header class="header" id="nav">
             <img class="logo" src="../media/icons/logo.png" alt='LOGO'/>
             <div class="header__container">
                 <nav class="navbar">
@@ -23,28 +23,23 @@
             </div>
             <div class="cart-widget">
                 <a href="./cart.html"><img class="cart-logo" src="../media/icons/cart.png"/></a>
-                <span class="cart-counter">0</span>
+                <span class="cart-counter" v.model.lazy="cartTotal">{{cartTotal}}</span>
             </div>
         </header>
 
-        <main class="catalog" id="catalog">
-
-            <div class="content" id="content">
-
+        <main class="catalog" id="catalog">         
+            <h2>CATALOG</h2>
+            <div class="content">
                 <div class="section-cards" v-for="product in catalog">
                     <div class="card">
-                        <div class="content-img">
-                            <img :src="product.img" />
-                            <p class="description">{{product.description}}</p>
-                            <p class="price">${{product.price}}</p>  
-                            <p class="color">{{product.color}}</p>  
-                            <p class="size">{{product.size}}</p>  
-                            <p :class="product.stock > 3 ? 'stock-high' : 'stock-low'">{{product.stock}}</p>
-                            <!-- Cambia la class del stock segun el numero de stock: rojo si hay < 3 o verde si hay > 3 -->
-                            <button v-on:click="addItemToCart(product)">ADD</button>
-                        </div>
+                        <img :src="product.img" />
+                        <p class="description">{{product.description}}</p>
+                        <p class="price">${{product.price}}</p>  
+                        <p class="size">{{product.size}}</p>  
+                        <p :class="product.stock > 3 ? 'stock-high' : 'stock-low'">{{product.stock}}</p>
+                        <!-- Cambia la class del stock segun el numero de stock: rojo si hay < 3 o verde si hay > 3 -->
+                        <button v-on:click="addItemToCart(product)"><img class="add" src="../media/icons/cart.png"/></button>
                     </div>
-
                 </div>
             </div>
         </main>
@@ -64,6 +59,7 @@
 
     </body>
     <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="../js/nav.js"></script>
     <script type="module" src="../js/catalog.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

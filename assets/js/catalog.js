@@ -1,7 +1,8 @@
 import { storage } from "./storage.js";
 const { createApp } = Vue;
 
-let url = "https://sheetdb.io/api/v1/f7bl7f40k06yl"
+// let url = "https://sheetdb.io/api/v1/f7bl7f40k06yl"
+let url = "../data/catalog.json"
 let imgPath = "../media/images/catalog/"
 const idParent = "catalog";
 const app = {

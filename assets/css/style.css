@@ -94,6 +94,16 @@
     text-decoration: none;
 }
 
+.navLog {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 700;
+    font-size: 16   px;
+    color: rgb(212, 24, 190);
+    cursor: pointer;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
 .header .cart-widget {
     display: flex;
     flex-direction: column;

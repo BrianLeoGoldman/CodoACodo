@@ -509,6 +509,47 @@ form ::placeholder {
     font-family: 'Architects Daughter', cursive;
 }
 
+/* REGISTER */
+
+.iAgree {
+    display: flex;
+    justify-content: center;
+    margin: -15px 0px 20px 0px;
+}
+
+.iAgree p {
+    margin: -3px 0px 0px 5px;
+    color: #fff;
+}
+
+.backLogin {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    color: rgba(164, 92, 223, 0.644);
+}
+
+.backLogin a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: rgba(164, 92, 223, 0.644);
+}
+
+/* FORGOT */
+
+.back {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.back a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: rgba(164, 92, 223, 0.644);
+}
+
 
 /* FOOTER */
 

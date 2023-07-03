@@ -18,11 +18,11 @@
         <form action="" method="POST" enctype="" class="formLog">
             <img class="logoLog" src="../../assets/media/icons/logo.png" alt='LOGO'/>
             <div class="inputBox">
-                <input class="inputLog" type="text" name="user" id="user" placeholder="USERNAME">
+                <input class="inputLog" type="text" name="user" id="username" placeholder="USERNAME">
                 <i class='bx bxs-user'></i>
             </div>
             <div class="inputBox">
-                <input class="inputLog" type="text" name="mail" id="mail" placeholder="EMAIL">
+                <input class="inputLog" type="text" name="mail" id="email" placeholder="EMAIL">
                 <i class='bx bxs-envelope'></i>
             </div>
             <div class="inputBox">
@@ -32,11 +32,13 @@
             <div class="iAgree">
                 <input type="checkbox" name="condition" id="condition"><p>I agree to the terms & conditions</p>
             </div>
-            <button class="buttonLog" type="submit">REGISTER</button>
+            <button class="buttonLog" type="submit" id="buttonLog">REGISTER</button>
             <div class="backLogin">
                 <p>Already have an account?<a href="./login.html">LOGIN</a>
             </div>
         </form>
     </main>
 </body>
+<script src="../js/logup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

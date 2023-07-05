@@ -15,7 +15,8 @@ button.addEventListener('click', (e) => {
             text: 'Some data is missing. Please try again.',
         });
     } else {
-        var csrftoken = getCookie('csrftoken');
+        // TODO: revisar el csrftoken en el Front y el Back
+        // var csrftoken = getCookie('csrftoken');
         const options = {
             method: "POST",
             mode: "cors",
@@ -29,24 +30,23 @@ button.addEventListener('click', (e) => {
             .then(response => response.text())
             .then(data => {
                 console.log(data);
-                alert(data);
+                let exito = 'Inicio de sesión exitoso'
+                if (data === exito) {
+                    sessionStorage.setItem('logUser', username);
+                    window.location.replace("../../index.html");
+                } else {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'No user?',
+                        html:'Log up ' + '<a href="../pages/register.html">here</a>',
+                    });
+                }
             })
             .catch(error => console.log(error));
-        //window.location.replace("../../index.html");
-        // if (logUser === null) {
-        //     Swal.fire({
-        //         icon: 'warning',
-        //         title: 'No user?',
-        //         html:'Log up ' + '<a href="../pages/register.html">here</a>',
-        //       });
-        // } else {
-        //     sessionStorage.setItem('logUser', username);
-        //     window.location.replace("../index.html");
-        // }
     }
 });
 
-function getCookie(name) {
+/* function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
         var cookies = document.cookie.split(';');
@@ -59,4 +59,4 @@ function getCookie(name) {
         }
     }
     return cookieValue;
-}
+} */

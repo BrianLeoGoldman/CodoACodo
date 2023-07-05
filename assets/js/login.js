@@ -25,7 +25,7 @@ button.addEventListener('click', (e) => {
             },
             body: `username=${username}&contrasena=${contrasena}`
         }
-        fetch('http://127.0.0.1:8000/login/', options)
+        fetch('http://127.0.0.1:8000/marylu/login/', options)
             .then(response => response.text())
             .then(data => {
                 console.log(data);

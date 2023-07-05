@@ -3,12 +3,12 @@ button.addEventListener('click', (e) => {
     e.preventDefault();
 
     let username = document.getElementById('user').value;
-    let contrasena = document.getElementById('password').value;
+    let password = document.getElementById('password').value;
 
     console.log(username);
-    console.log(contrasena);
+    console.log(password);
     
-    if (username === "" || contrasena === "") {
+    if (username === "" || password === "") {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -24,14 +24,14 @@ button.addEventListener('click', (e) => {
                 //'X-CSRFToken': csrftoken,
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: `username=${username}&contrasena=${contrasena}`
+            body: `username=${username}&password=${password}`
         }
         fetch('http://127.0.0.1:8000/marylu/login/', options)
             .then(response => response.text())
             .then(data => {
                 console.log(data);
-                let exito = 'Inicio de sesión exitoso'
-                if (data === exito) {
+                let success_msg = 'Login successful'
+                if (data === success_msg) {
                     sessionStorage.setItem('logUser', username);
                     window.location.replace("../../index.html");
                 } else {

@@ -30,16 +30,18 @@
 
         <main class="catalog" id="catalog">         
             <h2>CATALOG</h2>
-            <div class="content">
-                <div class="section-cards" v-for="product in catalog">
-                    <div class="card">
-                        <img :src="product.img" />
-                        <p class="description">{{product.description}}</p>
-                        <p class="price">${{product.price}}</p>  
-                        <p class="size">{{product.size}}</p>  
-                        <p :class="product.stock > 3 ? 'stock-high' : 'stock-low'">{{product.stock}}</p>
-                        <!-- Cambia la class del stock segun el numero de stock: rojo si hay < 3 o verde si hay > 3 -->
-                        <button v-on:click="addItemToCart(product)"><img class="add" src="../media/icons/cart.png"/></button>
+            <div class="catalog-container">
+                <img v-if="loading" class="spinner__img" src="../media/videos/NRI0.gif" alt="Spinner">
+                <div v-else class="content">
+                    <div class="section-cards" v-for="product in catalog">
+                        <div class="card">
+                            <img :src="product.img" />
+                            <p class="description">{{product.description}}</p>
+                            <p class="price">${{product.price}}</p>  
+                            <p class="size">{{product.size}}</p>  
+                            <p :class="product.stock > 3 ? 'stock-high' : 'stock-low'">{{product.stock}}</p>
+                            <button v-on:click="addItemToCart(product)"><img class="add" src="../media/icons/cart.png"/></button>
+                        </div>
                     </div>
                 </div>
             </div>

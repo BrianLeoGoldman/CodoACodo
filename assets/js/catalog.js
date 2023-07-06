@@ -1,13 +1,14 @@
 import { storage } from "./storage.js";
 const { createApp } = Vue;
 
-// let url = "https://sheetdb.io/api/v1/f7bl7f40k06yl"
-let url = "../data/catalog.json"
+let url = "https://sheetdb.io/api/v1/f7bl7f40k06yl"
+// let url = "../data/catalog.json"
 let imgPath = "../media/images/catalog/"
 const idParent = "catalog";
 const app = {
     data: () => {
         return {
+            loading: true,
             catalog: []
         };
     },
@@ -20,6 +21,7 @@ const app = {
                     product.img = imgPath + product.img
                     this.catalog.push(product)
                 });
+                this.loading = !this.loading
             } catch(error) {
                 console.log(error);
             }

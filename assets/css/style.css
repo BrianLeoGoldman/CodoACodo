@@ -198,6 +198,12 @@
     margin: 40px auto;
 }
 
+.catalog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .catalog h2 {
     margin-top: 10x;
     margin-bottom: 30px;

@@ -43,7 +43,7 @@
 
 .header {
     background-color: white;
-    box-shadow: 0 0 10px rgba(212, 24, 190);
+    box-shadow: 0 0 10px rgba(164, 92, 223, 0.644);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,7 @@
 
 .header .logo:hover {
     animation: rotate 1s ease infinite;
-    filter: drop-shadow(0 0 0.5em #f403d0);
+    filter: drop-shadow(0 0 0.5em rgba(164, 92, 223, 0.644));
 }
 
 .header .header__container {
@@ -86,11 +86,21 @@
     font-family: 'Architects Daughter', cursive;
     font-weight: 700;
     font-size: 30px;
-    color: rgb(212, 24, 190);
+    color: rgba(164, 92, 223, 0.644);
     cursor: pointer;
     text-transform: uppercase;
     margin: 10px;
     letter-spacing: 5px;
+    text-decoration: none;
+}
+
+.navLog {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 700;
+    font-size: 16   px;
+    color: rgba(164, 92, 223, 0.644);
+    cursor: pointer;
+    margin-right: 20px;
     text-decoration: none;
 }
 
@@ -99,7 +109,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(234, 128, 202, 0.496);
+    background-color: rgba(223, 14, 234, 0.387);
     padding: 5px;
     padding-right: 10px;
     border-radius: 10px;
@@ -144,15 +154,15 @@
 
 .card {
     margin: 30px;
-    background: rgba(234, 128, 202, 0.496);
-    box-shadow: 0px 1px 10px rgba(234, 128, 202, 0.496);
+    background: rgba(223, 14, 234, 0.387);
+    box-shadow: 0px 1px 10px rgba(164, 92, 223, 0.644);
     cursor: default;
     width: 100%;
     border-radius: 8px;
 }
 
 .card:hover {
-    box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
+    box-shadow: 5px 5px 20px rgba(164, 92, 223, 0.644);
     transition: all .3s;
     transform: translateY(-3%);
 }
@@ -169,7 +179,11 @@
 }
 
 .card__conteiner h3 {
-    color: rgb(162, 37, 133);
+    color: rgba(164, 92, 223, 0.644);
+}
+
+.card__conteiner p {
+    color: #fff
 }
 
 .a__img {
@@ -193,19 +207,19 @@
 .catalog h2 {
     margin-top: 10x;
     margin-bottom: 30px;
-    background-color: rgb(162, 37, 133);
+    background-color:rgba(164, 92, 223, 0.644);
     color: white;
     font-size: 35px;
     display: flex;
     justify-content: center;
-    box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
+    box-shadow: 5px 5px 20px rgba(164, 92, 223, 0.644);
     font-family: 'Architects Daughter', cursive;
 }
 
 .catalog a {
     margin-top: 10x;
     margin-bottom: 30px;
-    color: rgb(162, 37, 133);
+    color: rgba(164, 92, 223, 0.644);
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -240,9 +254,7 @@
     margin: 0 10px;
     border-radius: 8px;
     transition: .3s;
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgb(162, 37, 133);
+    border-color: rgba(223, 14, 234, 0.387);
 }
 
 .content .section-cards .card img {
@@ -250,19 +262,19 @@
     height: auto;
     border-width: 1px;
     border-style: solid;
-    border-color: rgb(162, 37, 133);
+    border-color: rgba(223, 14, 234, 0.387);
     border-radius: 8px;
 }
 
 .content .section-cards .card .description {
-    color:rgb(162, 37, 133);
+    color:rgba(164, 92, 223, 0.644);
     font-weight: bold;
     font-size: 22px;
     margin-bottom: 10px;
 }
 
 .content .section-cards .card .price {
-    color:rgb(212, 24, 190);
+    color: #fff;
     font-size: 20px;
 }
 
@@ -295,19 +307,19 @@
 
 .main__form {
     width: 1000px;
-    background: rgba(234, 128, 202, 0.496);
+    background: rgba(223, 14, 234, 0.387);
     padding: 30px;
     margin: 60px 100px 60px 200px;
     border-radius: 8px;
     font-family: 'Architects Daughter', cursive;
     color: black;
-    box-shadow: 5px 5px 20px rgba(234, 128, 202, 0.496);
+    box-shadow: 5px 5px 20px rgba(164, 92, 223, 0.644);
 }
 
 .main__form h4 {
     font-size: 30px;
     margin-bottom: 20px;
-    background-color: rgb(162, 37, 133);
+    background-color: rgba(164, 92, 223, 0.644);
     color: white;
     display: flex;
     justify-content: center;
@@ -323,10 +335,11 @@
     margin-left: 30px;
     padding: 10px;
     font-family: 'Architects Daughter', cursive;
+    color: #fff;
 }
 
 form ::placeholder {
-    color: rgb(162, 37, 133);
+    color: rgba(164, 92, 223, 0.644);
     font-family: 'Architects Daughter', cursive;
 }
 
@@ -351,7 +364,7 @@ form ::placeholder {
 }
 
 .section--input {
-    background-color: rgb(162, 37, 133);
+    background-color:rgba(164, 92, 223, 0.644);
     border: none;
     color: white;
     width: 50px;
@@ -366,7 +379,7 @@ form ::placeholder {
 /* CART */
 
 .catalog .total {
-    color: rgb(162, 37, 133);
+    color: rgba(164, 92, 223, 0.644);
     font-family: 'Architects Daughter', cursive;
     font-size: 1.5rem;
     display: flex;
@@ -400,9 +413,9 @@ form ::placeholder {
 .card .item_button button {
     border-width: 1px;
     border-style: solid;
-    background-color: rgb(162, 37, 133);
+    background-color: rgba(164, 92, 223, 0.644);
     color: white;
-    border-color: rgb(162, 37, 133);
+    border-color: rgba(164, 92, 223, 0.644);
     font-size: 12px;
     border-radius: 8px;
     margin: 2px;
@@ -416,15 +429,133 @@ form ::placeholder {
 .payment__section .catalog .content_buttonbuy .button_buy{
     border-width: 1px;
     border-style: solid;
-    background-color: rgb(162, 37, 133);
+    background-color: rgba(164, 92, 223, 0.644);
     color: white;
-    border-color: rgb(162, 37, 133);
+    border-color: rgba(164, 92, 223, 0.644);
     font-size: 20px;
     border-radius: 8px;
     margin: 2px;
     padding: 5px;
     justify-content: center;
 }
+
+/* LOGIN */
+
+.bodyLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(223, 14, 234, 0.387);
+}
+
+.login{
+    width: 420px;
+}
+
+.login .inputBox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.logoLog {
+    margin-left: 65px;
+}
+
+.inputBox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(164, 92, 223, 0.644);
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    color: rgba(164, 92, 223, 0.644);
+    font-family: 'Architects Daughter', cursive;
+}
+
+.inputBox i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(164, 92, 223, 0.644);
+}
+
+.login .forgotRegister {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    font-size: 14px;
+    margin: -15px 0 15px;
+}
+
+.forgotRegister a{
+    color: rgba(164, 92, 223, 0.644);
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 50px;
+}
+
+.buttonLog {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color:rgba(164, 92, 223, 0.644);
+    font-size: 20px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+/* REGISTER */
+
+.iAgree {
+    display: flex;
+    justify-content: center;
+    margin: -15px 0px 20px 0px;
+}
+
+.iAgree p {
+    margin: -3px 0px 0px 5px;
+    color: #fff;
+}
+
+.backLogin {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    color: rgba(164, 92, 223, 0.644);
+}
+
+.backLogin a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: rgba(164, 92, 223, 0.644);
+}
+
+/* FORGOT */
+
+.back {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.back a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: rgba(164, 92, 223, 0.644);
+}
+
 
 /* FOOTER */
 
@@ -433,8 +564,8 @@ form ::placeholder {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(162, 37, 133);
-    box-shadow: 0 0 5px #1854af;
+    background-color: rgba(164, 92, 223, 0.644);
+    box-shadow: 0 0 5px rgba(164, 92, 223, 0.644);
     text-align: center;
     width: 100%;
     padding-bottom: 2px;
